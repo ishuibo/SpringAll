@@ -1,0 +1,12 @@
+server:
+  port: 8000
+spring:
+  thymeleaf:
+    cache: false # 关闭页面缓存
+    encoding: UTF-8 # 模板编码
+    prefix: classpath:/templates/  # 页面映射路径
+    suffix: .html # 试图后的后缀
+    mode: HTML5 # 模板模式
+
+# 其他具体配置可参考org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties
+# 上面的配置实际上就是注入该类的属性值
