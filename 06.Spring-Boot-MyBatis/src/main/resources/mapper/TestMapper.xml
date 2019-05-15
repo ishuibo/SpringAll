@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.shuibo.dao.TestDao">
+    <resultMap id="BaseResultMap" type="cn.shuibo.domain.Test">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+    </resultMap>
+
+    <insert id="insetTest" parameterType="cn.shuibo.domain.Test">
+        INSERT INTO test(
+        name,
+        age,
+        )
+        VALUES(
+        #{name},
+        #{age})
+    </insert>
+
+    <update id="updateTest"  parameterType="cn.shuibo.domain.Test">
+        update test
+        <set>
+            <if test="name!=null and name!=''">
+                name = #{name},
+            </if>
+            <if test="age!=null and age!=''">
+                age = #{age}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="getTest" resultMap="BaseResultMap">
+      select * from test
+    </select>
+
+    <select id="getTestById" parameterType="int" resultType="cn.shuibo.domain.Test">
+        select * from test where id=#{id}
+    </select>
+
+    <delete id="deleteTestByIds" parameterType="int">
+        delete from test where id=#{id}
+    </delete>
+</mapper>
