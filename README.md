@@ -7,5 +7,5 @@ Spring Boot &amp; Spring Cloud 学习记录整理  &amp; http://shuibo.cn
 03.[Spring Boot 引入Thymeleaf](https://www.shuibo.cn/88.html)  
 04.[Spring Boot 引入Spring Data JPA](https://www.shuibo.cn/92.html)  
 05.[Spring Boot 接口返回及入参RSA加解密](https://www.shuibo.cn/102.html)  
-06.[Spring Boot 引入 MyBatis](https://www.shuibo.cn/124.html)
+06.[Spring Boot 引入 MyBatis](https://www.shuibo.cn/124.html)  
 07.[Spring Boot 之异步调用Async](https://www.shuibo.cn/134.html)
